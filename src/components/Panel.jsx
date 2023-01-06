@@ -10,10 +10,9 @@ const Panel = ({ active, setActive, image }) => {
   let midStyle = image.id === active ? activeMid : inactiveMid;
 
   const activeTopBot = `opacity-100 translate-y-0 text-4xl`;
-  const inactiveTop = `opacity-100 text-4xl -translate-y-20`;
-  const inactiveBot = `opacity-100 text-4xl translate-y-20`;
-  // const activeTopBot = `opacity-100 translate-y-0 text-4xl`;
-  // const inactiveTopBot = `opacity-50 text-[1px]`;
+  const inactiveTop = `opacity-0 text-[1px] -translate-y-20`;
+  const inactiveBot = `opacity-0 text-[1px] translate-y-20`;
+
   let topStyle = image.id === active ? activeTopBot : inactiveTop;
   let botStyle = image.id === active ? activeTopBot : inactiveBot;
 
