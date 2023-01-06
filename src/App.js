@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import Gallery from './components/Gallery';
+import { useState } from 'react';
 
 function App() {
+  const [active, setActive] = useState(null);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className='bg-black text-white min-h-screen relative'>
+      <header
+        className={`fixed p-2 bg-transparent w-full text-center bg-gradient-to-r from-yellow-600 to-pink-500 flex flex-col items-center`}
+      >
+        <h1 className={`text-3xl font-bold`}>JS Image Gallery</h1>
+        <div className={`bg-black/40 rounded-md m-1 `}>
+          created by{' '}
+          <a
+            className={`text-red-400 font-bold`}
+            href='https://0xbn.github.com/'
+          >
+            Brian
+          </a>
+        </div>
       </header>
+      <hr className={`border-transparent`} />
+      <main>
+        <div className={`pt-20 overflow-hidden`}>
+          <Gallery active={active} setActive={setActive} />
+        </div>
+      </main>
     </div>
   );
 }
