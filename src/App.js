@@ -23,7 +23,7 @@ function App() {
           created by{' '}
           <a
             className={`text-red-400 font-bold`}
-            href='https://0xbn.github.com/'
+            href='https://0xbn.github.io/'
           >
             Brian
           </a>
